@@ -1,0 +1,56 @@
+KLEE-MINTY-BOX ##### n = 10, 10000000 samples
+EXACT ANSWER: 2**n=1024
+P    mean=1024.0000000000002, variance=1.0536585139066597e+19=1.05366e+19, S.D.=3246010649.8695593=3.24601e+09
+IS   mean=1024.0000000000002, variance=4583721463857.412=4.58372e+12, S.D.=2140962.7422861457=2.14096e+06
+IS*  mean=1024.0000000000002, variance=4324432215823.355=4.32443e+12, S.D.=2079526.9211585973=2.07953e+06
+IS** mean=1024.0000000000002, variance=114617016.97485927=1.14617e+08, S.D.=10705.93372737097=10705.9
+first run P:  (95.6526752989969, 24)
+first run HS: (204.65872143889237, 77, 410)
+first run IS: (1798.2575838101905, 34, 0)
+first run SE: (1067.7572168777172, 581, 2100, 318)
+Algorithm P: random seed = 755223781
+    10 samples, avg.#visited=19.00, max.#vis=34, mean=882.06±2154.309, max=6959.77, CD=0.78904
+   100 samples, avg.#visited=15.42, max.#vis=38, mean=181.20±717.4156, max=6959.77, CD=0.38409
+  1000 samples, avg.#visited=16.11, max.#vis=48, mean=961.36±11280.53, max=285226.00, CD=0.29669
+ 10000 samples, avg.#visited=15.77, max.#vis=58, mean=711.45±18195.43, max=1689098.05, CD=0.23742
+100000 samples, avg.#visited=15.71, max.#vis=58, mean=1146.64±141587.7, max=44247971.00, CD=0.38589
+1000000 samples, avg.#visited=15.67, max.#vis=74, mean=854.81±65844.12, max=44247971.00, CD=0.05176
+10000000 samples, avg.#visited=15.68, max.#vis=78, mean=866.65±85253.06, max=102065438.00, CD=0.01178
+Importance sampling (IS) by outdegree: random seed = 338577359
+    10 samples, avg.#visited=17.60, max.#vis=28, mean=87.51±102.1391, max=333.86, CD=0.38153
+   100 samples, avg.#visited=21.64, max.#vis=50, mean=358.37±995.7329, max=7462.69, CD=0.20824
+  1000 samples, avg.#visited=22.35, max.#vis=52, mean=649.76±3521.685, max=93421.31, CD=0.14378
+ 10000 samples, avg.#visited=22.62, max.#vis=66, mean=904.44±24382.4, max=2379536.01, CD=0.26310
+100000 samples, avg.#visited=22.43, max.#vis=68, mean=863.27±15913.16, max=2907585.67, CD=0.03368
+1000000 samples, avg.#visited=22.40, max.#vis=76, mean=963.16±33681.14, max=17412551.61, CD=0.01808
+10000000 samples, avg.#visited=22.40, max.#vis=80, mean=986.25±58292.47, max=96508171.42, CD=0.00979
+Importance sampling (IS*) by reachable size: random seed = 278241739
+    10 samples, avg.#visited=26.80, max.#vis=44, mean=202.19±217.4252, max=697.32, CD=0.34488
+   100 samples, avg.#visited=24.08, max.#vis=52, mean=473.94±1054.704, max=9209.90, CD=0.19432
+  1000 samples, avg.#visited=22.39, max.#vis=70, mean=976.31±10248.41, max=290128.41, CD=0.29717
+ 10000 samples, avg.#visited=22.37, max.#vis=70, mean=1121.81±30028.15, max=2819825.70, CD=0.25136
+100000 samples, avg.#visited=22.39, max.#vis=76, mean=897.18±13521.48, max=2819825.70, CD=0.03143
+1000000 samples, avg.#visited=22.40, max.#vis=76, mean=1026.18±61065.27, max=49541370.45, CD=0.04828
+10000000 samples, avg.#visited=22.40, max.#vis=80, mean=1006.20±65644.45, max=129008733.34, CD=0.01282
+Importance sampling (IS**) with size/indegree: random seed = 499034474
+    10 samples, avg.#visited=37.40, max.#vis=58, mean=583.24±611.6456, max=2065.36, CD=0.35412
+   100 samples, avg.#visited=43.14, max.#vis=68, mean=1299.78±4880.996, max=47689.60, CD=0.36690
+  1000 samples, avg.#visited=42.00, max.#vis=82, mean=897.68±2388.117, max=47689.60, CD=0.05313
+ 10000 samples, avg.#visited=42.25, max.#vis=96, mean=976.62±3751.658, max=151507.04, CD=0.01551
+100000 samples, avg.#visited=42.45, max.#vis=98, mean=1066.52±19674.97, max=5921641.49, CD=0.05552
+1000000 samples, avg.#visited=42.44, max.#vis=104, mean=1034.87±12622.9, max=6652543.23, CD=0.00643
+10000000 samples, avg.#visited=42.46, max.#vis=112, mean=1023.19±8554.428, max=9692009.22, CD=0.00095
+Heuristic sampling (HS) by outdegree: random seed = 110120973
+    10 samples, avg.#visited=180.10, max.#vis=342, avg.#inserted=894.70, mean=1183.18±1423.257, max=4636.95, CD=0.39191
+   100 samples, avg.#visited=189.50, max.#vis=669, avg.#inserted=924.20, mean=1171.77±2521.869, max=19050.13, CD=0.16258
+  1000 samples, avg.#visited=197.45, max.#vis=898, avg.#inserted=956.91, mean=1111.95±3284.874, max=77168.34, CD=0.06940
+ 10000 samples, avg.#visited=192.28, max.#vis=898, avg.#inserted=933.30, mean=1022.80±3526.048, max=242475.46, CD=0.02371
+100000 samples, avg.#visited=192.65, max.#vis=1139, avg.#inserted=934.33, mean=1014.03±3282.614, max=322180.72, CD=0.00318
+1000000 samples, avg.#visited=193.16, max.#vis=1328, avg.#inserted=936.58, mean=1031.06±4959.529, max=2965101.37, CD=0.00288
+Stochastic estimation (SE) (horde_limit=10): random seed = 149161480
+    10 samples, avg.#visited=700.60, max.#vis=961, avg.#inserted=2471.00, avg.#saved=387.80, mean=1508.53±1519.971, max=4907.21, CD=0.32530
+   100 samples, avg.#visited=689.87, max.#vis=1000, avg.#inserted=2400.63, avg.#saved=384.43, mean=939.56±998.8812, max=5305.77, CD=0.05647
+  1000 samples, avg.#visited=712.79, max.#vis=1161, avg.#inserted=2501.84, avg.#saved=392.86, mean=1028.25±1292.828, max=16223.98, CD=0.01578
+ 10000 samples, avg.#visited=709.33, max.#vis=1181, avg.#inserted=2485.83, avg.#saved=392.20, mean=1001.67±1342.208, max=41010.79, CD=0.00409
+100000 samples, avg.#visited=709.07, max.#vis=1221, avg.#inserted=2485.73, avg.#saved=391.90, mean=1018.42±1442.244, max=69518.03, CD=0.00068
+1000000 samples, avg.#visited=709.29, max.#vis=1441, avg.#inserted=2486.12, avg.#saved=392.18, mean=1024.60±1483.744, max=127906.68, CD=0.00012
