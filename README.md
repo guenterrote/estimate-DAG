@@ -4,7 +4,7 @@ Estimating the size of a DAG by following random paths
 The python programs
 estimating-DAG...py perform experiments for two
 types of examples: the permutation DAG and Klee-Minty cubes.
-The parameter n can be given on the command line.
+The size parameter n can be given on the command line.
 It is preferable to process these files with the pypy interpreter
 instead of the standard python interpreter, which may
 have a "MemoryError" on larger instances.
