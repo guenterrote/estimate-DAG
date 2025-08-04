@@ -100,7 +100,7 @@ def compute_variance_importance_sampling(use_size=0):
         Var[u] = tot_prob*V
     return mean[source_vertex], Var[source_vertex]
 
-def commit_to_file(mean,var, name, true_value, resultfile):
+def commit_to_file(mean,var, name, true_value, resultfile, problem):
     assert(abs(mean-true_value)<1e-10*mean)
     print (f"true_SD[{repr(problem)},{n},{repr(name)}] = {sqrt(var)}",
            file = resultfile)
@@ -116,19 +116,19 @@ if __name__ == "__main__":
 
     Me,Va = compute_variance()
     print(f"P    mean={Me}, variance={Va}={Va:g}, S.D.={sqrt(Va)}={sqrt(Va):g}")
-    commit_to_file(Me,Va, 'Algorithm P:', true_value, resultfile)
+    commit_to_file(Me,Va, 'Algorithm P:', true_value, resultfile, problem)
 
     Me_IS,Va_IS = compute_variance_importance_sampling()
     print(f"IS   mean={Me_IS}, variance={Va_IS}={Va_IS:g}, S.D.={sqrt(Va_IS)}={sqrt(Va_IS):g}")
-    commit_to_file(Me_IS,Va_IS, "Importance sampling (IS) by outdegree:", true_value, resultfile)
+    commit_to_file(Me_IS,Va_IS, "Importance sampling (IS) by outdegree:", true_value, resultfile, problem)
 
     Me_IS,Va_IS = compute_variance_importance_sampling(1)
     print(f"IS*  mean={Me_IS}, variance={Va_IS}={Va_IS:g}, S.D.={sqrt(Va_IS)}={sqrt(Va_IS):g}")
-    commit_to_file(Me_IS,Va_IS, "Importance sampling (IS*) by reachable size:", true_value, resultfile)
+    commit_to_file(Me_IS,Va_IS, "Importance sampling (IS*) by reachable size:", true_value, resultfile, problem)
     
     Me_IS,Va_IS = compute_variance_importance_sampling(2)
     print(f"IS** mean={Me_IS}, variance={Va_IS}={Va_IS:g}, S.D.={sqrt(Va_IS)}={sqrt(Va_IS):g}")
-    commit_to_file(Me_IS,Va_IS, "Importance sampling (IS**) with size/indegree:", true_value, resultfile)
+    commit_to_file(Me_IS,Va_IS, "Importance sampling (IS**) with size/indegree:", true_value, resultfile, problem)
 
 def insert(p,W,stratum,Store):
     z = Store[stratum]

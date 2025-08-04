@@ -80,7 +80,7 @@ def compute_variance():
 
 Me,Va = compute_variance()
 print(f"P mean={Me}, variance={Va}={Va:g}, S.D.={sqrt(Va)}={sqrt(Va):g}")
-commit_to_file(Me,Va, 'Algorithm P:', true_value, resultfile)
+commit_to_file(Me,Va, 'Algorithm P:', true_value, resultfile, problem)
 
 def compute_variance_importance_sampling():
     """compute mean and variance of the estimate,
@@ -139,7 +139,7 @@ def compute_variance_importance_sampling():
 
 Me_IS,Va_IS = compute_variance_importance_sampling()
 print(f"IS mean={Me_IS}, variance={Va_IS}={Va_IS:g}, S.D.={sqrt(Va_IS)}={sqrt(Va_IS):g}")
-commit_to_file(Me_IS,Va_IS, "Importance sampling (IS) by outdegree:", true_value, resultfile)
+commit_to_file(Me_IS,Va_IS, "Importance sampling (IS) by outdegree:", true_value, resultfile, problem)
 
 
 def insert(p,W,stratum,Store):
