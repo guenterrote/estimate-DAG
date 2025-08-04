@@ -5,7 +5,8 @@ The python programs
 estimating-DAG...py perform experiments for two
 types of examples: the permutation DAG and Klee-Minty cubes.
 The size parameter n can be given on the command line.
-It is preferable to process these files with the pypy interpreter
+For computing the exact variance, the programs need a lot of memory.
+It is preferable to run these programs with the pypy interpreter
 instead of the standard python interpreter, which may
 have a "MemoryError" on larger instances.
 
