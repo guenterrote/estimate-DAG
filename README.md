@@ -9,12 +9,12 @@ It is preferable to process these files with the pypy interpreter
 instead of the standard python interpreter, which may
 have a "MemoryError" on larger instances.
 
-The results are written to the standard output, as well as to files of the form result...py,
+The results are logged to the standard output, and they are written to files of the form result...py,
 for further processing.
-The python script analyze.py reads these result files and creates the
+The python script analyze.py reads these result files and creates
 tables in LaTeX format
 for the paper "Estimating the size of a DAG by following random paths"
-in the subdirectory tables.
+in the subdirectory "tables".
 The file
 estimating-DAG-full-tables.pdf
 (generated from 
