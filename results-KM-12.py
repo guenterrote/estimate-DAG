@@ -158,3 +158,7 @@ result['KM',12,'Stochastic estimation (SE) (horde_limit=10):',100000] = {
               'mean' : 4069.6201334497064, 's.d.': 12271.13084941558, 'max': 1070191.9370869594, 'CD': 0.0026297096583798025,
               'avg.#visited': 937.81505, 'max.#vis': 1720,
               "avg.#inserted": 3892.66, "avg.#saved": 416.33 }
+result['KM',12,'Stochastic estimation (SE) (horde_limit=10):',1000000] = {
+              'mean' : 4082.0728697400264, 's.d.': 13309.83487467298, 'max': 3929953.3768863822, 'CD': 0.0009627347434237909,
+              'avg.#visited': 937.668374, 'max.#vis': 1839,
+              "avg.#inserted": 3892.11, "avg.#saved": 416.23 }

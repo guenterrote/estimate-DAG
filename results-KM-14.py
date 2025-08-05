@@ -134,3 +134,31 @@ result['KM',14,'Heuristic sampling (HS) by outdegree:',100000] = {
               'mean' : 15669.192503652326, 's.d.': 194101.2867788957, 'max': 33569882.04694046, 'CD': 0.02142413020908108,
               'avg.#visited': 1679.91578, 'max.#vis': 14463,
               "avg.#inserted": 10989.58, "avg.#saved": 0.00 }
+result['KM',14,'Heuristic sampling (HS) by outdegree:',1000000] = {
+              'mean' : 17741.314684825305, 's.d.': 1510294.4128225497, 'max': 1479781675.026162, 'CD': 0.08340879474348453,
+              'avg.#visited': 1674.282986, 'max.#vis': 15202,
+              "avg.#inserted": 10954.39, "avg.#saved": 0.00 }
+result['KM',14,'Stochastic estimation (SE) (horde_limit=10):',10] = {
+              'mean' : 8289.126387099015, 's.d.': 15826.342611076403, 'max': 52592.16516395146, 'CD': 0.6344717489867758,
+              'avg.#visited': 1068.7, 'max.#vis': 1281,
+              "avg.#inserted": 5076.60, "avg.#saved": 397.70 }
+result['KM',14,'Stochastic estimation (SE) (horde_limit=10):',100] = {
+              'mean' : 12516.37317682219, 's.d.': 21836.320033913504, 'max': 136372.7610005881, 'CD': 0.10895549299626435,
+              'avg.#visited': 1139.15, 'max.#vis': 1660,
+              "avg.#inserted": 5423.44, "avg.#saved": 427.14 }
+result['KM',14,'Stochastic estimation (SE) (horde_limit=10):',1000] = {
+              'mean' : 13986.330556964802, 's.d.': 35657.43892706644, 'max': 565778.0279149932, 'CD': 0.04045221336723317,
+              'avg.#visited': 1174.439, 'max.#vis': 1961,
+              "avg.#inserted": 5644.55, "avg.#saved": 433.69 }
+result['KM',14,'Stochastic estimation (SE) (horde_limit=10):',10000] = {
+              'mean' : 16142.170082652063, 's.d.': 76318.2167439245, 'max': 3081953.450822122, 'CD': 0.01909255964372651,
+              'avg.#visited': 1176.4386, 'max.#vis': 2200,
+              "avg.#inserted": 5656.09, "avg.#saved": 433.98 }
+result['KM',14,'Stochastic estimation (SE) (horde_limit=10):',100000] = {
+              'mean' : 16842.51372385983, 's.d.': 176743.12065180592, 'max': 36639137.928478345, 'CD': 0.02175396056027775,
+              'avg.#visited': 1178.3914, 'max.#vis': 2201,
+              "avg.#inserted": 5669.87, "avg.#saved": 433.67 }
+result['KM',14,'Stochastic estimation (SE) (horde_limit=10):',1000000] = {
+              'mean' : 16266.863123545716, 's.d.': 141050.41670355745, 'max': 49703700.91206142, 'CD': 0.003055518481625204,
+              'avg.#visited': 1178.995804, 'max.#vis': 2340,
+              "avg.#inserted": 5673.03, "avg.#saved": 433.78 }

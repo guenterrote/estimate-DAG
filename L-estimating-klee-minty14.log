@@ -46,3 +46,11 @@ Heuristic sampling (HS) by outdegree: random seed = 66746886
   1000 samples, avg.#visited=1704.99, max.#vis=9649, avg.#inserted=11174.39, mean=15876.77±84660.24, max=1911921.44, CD=0.12042
  10000 samples, avg.#visited=1668.82, max.#vis=11891, avg.#inserted=10921.35, mean=13916.51±59069.02, max=2104208.39, CD=0.01512
 100000 samples, avg.#visited=1679.92, max.#vis=14463, avg.#inserted=10989.58, mean=15669.19±194101.3, max=33569882.05, CD=0.02142
+1000000 samples, avg.#visited=1674.28, max.#vis=15202, avg.#inserted=10954.39, mean=17741.31±1510294, max=1479781675.03, CD=0.08341
+Stochastic estimation (SE) (horde_limit=10): random seed = 277796354
+    10 samples, avg.#visited=1068.70, max.#vis=1281, avg.#inserted=5076.60, avg.#saved=397.70, mean=8289.13±15826.34, max=52592.17, CD=0.63447
+   100 samples, avg.#visited=1139.15, max.#vis=1660, avg.#inserted=5423.44, avg.#saved=427.14, mean=12516.37±21836.32, max=136372.76, CD=0.10896
+  1000 samples, avg.#visited=1174.44, max.#vis=1961, avg.#inserted=5644.55, avg.#saved=433.69, mean=13986.33±35657.44, max=565778.03, CD=0.04045
+ 10000 samples, avg.#visited=1176.44, max.#vis=2200, avg.#inserted=5656.09, avg.#saved=433.98, mean=16142.17±76318.22, max=3081953.45, CD=0.01909
+100000 samples, avg.#visited=1178.39, max.#vis=2201, avg.#inserted=5669.87, avg.#saved=433.67, mean=16842.51±176743.1, max=36639137.93, CD=0.02175
+1000000 samples, avg.#visited=1179.00, max.#vis=2340, avg.#inserted=5673.03, avg.#saved=433.78, mean=16266.86±141050.4, max=49703700.91, CD=0.00306

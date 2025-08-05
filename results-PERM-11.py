@@ -1,5 +1,5 @@
-true_SD['KM',11,'Algorithm P:'] = 20098947477270.35
-true_SD['KM',11,'Importance sampling (IS) by outdegree:'] = 3400359821701.1885
+true_SD['PERM',11,'Algorithm P:'] = 20098947477270.35
+true_SD['PERM',11,'Importance sampling (IS) by outdegree:'] = 3400359821701.1885
 result['PERM',11,'Algorithm P:',10] = {
               'mean' : 125617.41207451667, 's.d.': 136739.74427519034, 'max': 378358.8257557047, 'CD': 0.30119934769175233,
               'avg.#visited': 56.0, 'max.#vis': 56,

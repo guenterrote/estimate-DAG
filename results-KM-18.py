@@ -1,4 +1,4 @@
-true_SD['KM',18,'Algorithm P:'] = inf
+#true_SD['KM',18,'Algorithm P:'] = inf # infinity, calculation exceeds floating-point range
 true_SD['KM',18,'Importance sampling (IS) by outdegree:'] = 1.6405303759216811e+69
 true_SD['KM',18,'Importance sampling (IS*) by reachable size:'] = 4.871677784212314e+113
 true_SD['KM',18,'Importance sampling (IS**) with size/indegree:'] = 2.71124624710563e+26
@@ -110,3 +110,55 @@ result['KM',18,'Importance sampling (IS**) with size/indegree:',1000000] = {
               'mean' : 206329.28314976473, 's.d.': 28092318.78806157, 'max': 20720055015.246155, 'CD': 0.10042227016417461,
               'avg.#visited': 123.598112, 'max.#vis': 294,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
+result['KM',18,'Importance sampling (IS**) with size/indegree:',10000000] = {
+              'mean' : 171868.39359166147, 's.d.': 19953437.1870662, 'max': 25512819261.336887, 'CD': 0.01484439269383774,
+              'avg.#visited': 123.6068998, 'max.#vis': 310,
+              "avg.#inserted": 0.00, "avg.#saved": 0.00 }
+result['KM',18,'Heuristic sampling (HS) by outdegree:',10] = {
+              'mean' : 31338.757160786714, 's.d.': 36229.86025385214, 'max': 125179.14419270275, 'CD': 0.3994387637979971,
+              'avg.#visited': 15723.8, 'max.#vis': 41017,
+              "avg.#inserted": 134778.40, "avg.#saved": 0.00 }
+result['KM',18,'Heuristic sampling (HS) by outdegree:',100] = {
+              'mean' : 135710.7966052015, 's.d.': 389572.883264219, 'max': 2983218.8509064815, 'CD': 0.21982177730376254,
+              'avg.#visited': 21859.54, 'max.#vis': 133875,
+              "avg.#inserted": 180428.95, "avg.#saved": 0.00 }
+result['KM',18,'Heuristic sampling (HS) by outdegree:',1000] = {
+              'mean' : 186049.00425236992, 's.d.': 1283332.8628239573, 'max': 37129258.45585213, 'CD': 0.19956709042896784,
+              'avg.#visited': 22047.064, 'max.#vis': 180712,
+              "avg.#inserted": 182194.22, "avg.#saved": 0.00 }
+result['KM',18,'Heuristic sampling (HS) by outdegree:',10000] = {
+              'mean' : 238368.75437695824, 's.d.': 5677795.948264796, 'max': 546912443.6977789, 'CD': 0.22943965333345967,
+              'avg.#visited': 22170.0525, 'max.#vis': 234741,
+              "avg.#inserted": 183296.45, "avg.#saved": 0.00 }
+result['KM',18,'Heuristic sampling (HS) by outdegree:',100000] = {
+              'mean' : 257050.98140928772, 's.d.': 17181894.10907269, 'max': 5344758538.588829, 'CD': 0.20792601176957473,
+              'avg.#visited': 22371.01243, 'max.#vis': 270310,
+              "avg.#inserted": 184933.35, "avg.#saved": 0.00 }
+result['KM',18,'Heuristic sampling (HS) by outdegree:',1000000] = {
+              'mean' : 231119.3307888148, 's.d.': 8310539.510224533, 'max': 5344758538.588829, 'CD': 0.023125536580376305,
+              'avg.#visited': 22389.581437, 'max.#vis': 305716,
+              "avg.#inserted": 185115.02, "avg.#saved": 0.00 }
+result['KM',18,'Stochastic estimation (SE) (horde_limit=10):',10] = {
+              'mean' : 68493.5269078715, 's.d.': 124655.470680849, 'max': 414735.24396109435, 'CD': 0.6055101302038975,
+              'avg.#visited': 1620.7, 'max.#vis': 2461,
+              "avg.#inserted": 9805.00, "avg.#saved": 457.50 }
+result['KM',18,'Stochastic estimation (SE) (horde_limit=10):',100] = {
+              'mean' : 220869.1616906356, 's.d.': 1227752.3449716687, 'max': 12228219.063762804, 'CD': 0.5536408509980438,
+              'avg.#visited': 1657.34, 'max.#vis': 2461,
+              "avg.#inserted": 10096.48, "avg.#saved": 451.98 }
+result['KM',18,'Stochastic estimation (SE) (horde_limit=10):',1000] = {
+              'mean' : 178839.2708435464, 's.d.': 1148275.4482304696, 'max': 29119619.623247087, 'CD': 0.16282564498220162,
+              'avg.#visited': 1684.547, 'max.#vis': 2681,
+              "avg.#inserted": 10294.02, "avg.#saved": 454.27 }
+result['KM',18,'Stochastic estimation (SE) (horde_limit=10):',10000] = {
+              'mean' : 235063.46576621762, 's.d.': 4538204.468277323, 'max': 399466204.8407428, 'CD': 0.1699397239543945,
+              'avg.#visited': 1692.7842, 'max.#vis': 3341,
+              "avg.#inserted": 10342.52, "avg.#saved": 456.53 }
+result['KM',18,'Stochastic estimation (SE) (horde_limit=10):',100000] = {
+              'mean' : 268082.89187771914, 's.d.': 8112919.069140165, 'max': 2180158391.3197484, 'CD': 0.08132404033876901,
+              'avg.#visited': 1695.39408, 'max.#vis': 3341,
+              "avg.#inserted": 10366.71, "avg.#saved": 456.73 }
+result['KM',18,'Stochastic estimation (SE) (horde_limit=10):',1000000] = {
+              'mean' : 249829.71800187413, 's.d.': 7681884.639527364, 'max': 3570203612.6827683, 'CD': 0.014290548143099557,
+              'avg.#visited': 1694.7487, 'max.#vis': 3421,
+              "avg.#inserted": 10361.84, "avg.#saved": 456.64 }

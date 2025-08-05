@@ -53,3 +53,4 @@ Stochastic estimation (SE) (horde_limit=10): random seed = 493458650
   1000 samples, avg.#visited=936.27, max.#vis=1641, avg.#inserted=3887.61, avg.#saved=414.26, mean=3988.33±8651.252, max=138147.69, CD=0.03464
  10000 samples, avg.#visited=936.50, max.#vis=1641, avg.#inserted=3890.37, avg.#saved=415.38, mean=4124.82±11867.52, max=698079.67, CD=0.01692
 100000 samples, avg.#visited=937.82, max.#vis=1720, avg.#inserted=3892.66, avg.#saved=416.33, mean=4069.62±12271.13, max=1070191.94, CD=0.00263
+1000000 samples, avg.#visited=937.67, max.#vis=1839, avg.#inserted=3892.11, avg.#saved=416.23, mean=4082.07±13309.83, max=3929953.38, CD=0.00096

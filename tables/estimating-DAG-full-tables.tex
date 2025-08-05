@@ -1,0 +1,72 @@
+\documentclass[11pt%,a4paper
+]{article}
+
+\usepackage[left=22mm,top=15mm,right=22mm,landscape]{geometry}
+
+\begin{document}
+\title{Estimating the Size of a DAG
+  by Following
+  Random Paths---Extensive Tables of Experimental Results}
+\author{Paper \#20, submitted to SOSA 2026 in Vancouver}
+\maketitle
+
+\newcommand\twotables[1]{
+\begin{table}[htb]
+  \small
+  \centering
+  \input #1
+  \bigskip
+  \par 
+  \hbox to\linewidth{\hss
+    \input #1 }
+}
+
+\twotables{table-PERM-P-all}  
+\caption{Algorithm P, Path Sampling, permutations}
+\end{table}
+\clearpage
+\twotables{table-PERM-IS-all }
+\caption{IS by outdegree, permutations}
+\end{table}
+\clearpage
+\twotables{table-PERM-BS-all }
+\caption{Bucket Sampling, permutations}
+\end{table}
+
+\clearpage
+\twotables{table-PERM-CS-all }
+\caption{Crowd Sampling, permutations, budget $B=10$}
+\end{table}
+
+\clearpage
+\twotables{table-KM-P-all }
+\caption{Algorithm P, Path Sampling, Klee-Minty cubes}
+\end{table}
+
+\clearpage
+\twotables{table-KM-IS-all }
+\caption{IS by outdegree, Klee-Minty cubes}
+\end{table}
+
+\clearpage
+\twotables{table-KM-IS1-all }
+\caption{IS by size, Klee-Minty cubes}
+\end{table}
+
+\clearpage
+\twotables{table-KM-IS2-all }
+\caption{IS by size/indegree, Klee-Minty cubes}
+\end{table}
+
+\clearpage
+\twotables{table-KM-BS-all}
+\caption{Bucket Sampling, Klee-Minty cubes}
+\end{table}
+
+\clearpage
+\twotables{table-KM-CS-all}
+\caption{Crowd Sampling, budget $B=10$, Klee-Minty cubes}
+\end{table}
+
+
+\end{document}
