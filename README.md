@@ -22,3 +22,6 @@ estimating-DAG-full-tables.pdf
 estimating-DAG-full-tables.tex) in that directory
 contains the full results for the permutation DAG for n=7,8,...,12,
 and for Klee-Minty cubes of dimension n=8,10,12,...,18.
+
+The method can also estimate the number of source-sink paths, but no
+experiments have been carried out in this direction.
