@@ -1,5 +1,5 @@
 # estimate-DAG
-Estimating the size of a DAG by following random paths
+Estimating the number of nodes and paths in a DAG by following a random path
 
 The python programs
 estimating-DAG...py perform experiments for two
