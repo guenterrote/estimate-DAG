@@ -242,7 +242,7 @@ def importance_sampling(use_size=0):
             v = swap(u,i)
             if use_size==1:
                 weight = 2**n-v # size of reachable subgraph
-            if use_size==2:
+            elif use_size==2:
                 # also take into account the indegree
                 weight = (2**n-v)/indegree(v)
             else:
