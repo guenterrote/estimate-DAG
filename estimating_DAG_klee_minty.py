@@ -196,7 +196,6 @@ def path_sampling():
 
 def random_selection_from_class(S,k,n):
     # from the k-th class out of n almost equal classes
-    shuffle(S) 
     bucket = S[k::n]
     vertices = [x for x,w in bucket]
     weights =  [w for x,w in bucket]
@@ -224,6 +223,7 @@ def crowd_sampling():
         if len(new_A) <= crowd_budget_B:
             A = new_A
         else:
+            shuffle(new_A) # random partition into classes new_A[k::B]
             A = [random_selection_from_class(new_A,k,crowd_budget_B)
                  for k in range(crowd_budget_B)]
     return X,num_visited,num_inserted, num_inserted-num_condensed
@@ -337,7 +337,7 @@ if __name__ == "__main__":
         ("Importance sampling (IS**) with size/indegree:",
          importance_sampling_size_by_indegree, None,num_samples),
         ("Bucket sampling (BS) by outdegree:", bucket_sampling, None,
-           num_samples//10), # heuristic sampling does more work per sample.
+           num_samples//10), # bucket sampling does more work per sample.
         (f"Crowd sampling (CS) ({crowd_budget_B=}):", crowd_sampling, None,num_samples//10),
           ]:
         run_method(resultfile, problem,n,name,method,rand_seed,num_s, true_value)
