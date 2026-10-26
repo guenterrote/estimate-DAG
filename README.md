@@ -7,15 +7,15 @@ by Günter Rote.
 The full version of the paper is in the file fullpaper.pdf.
 
 The python programs
-estimating-DAG-permutations.py and estimating_DAG_klee_minty.py
+`estimating-DAG-permutations.py` and `estimating_DAG_klee_minty.py`
 perform experiments for two
 types of examples: the permutation DAG and Klee-Minty cubes.
 The size parameter n can be given on the command line, for example
-
+```
     pypy3 estimating_DAG_klee_minty.py 10
-
-(estimating-DAG-permutations.py imports some functions from
-estimating_DAG_klee_minty.py, so both files must be in the same directory.)
+```
+(`estimating-DAG-permutations.py` imports some functions from
+`estimating_DAG_klee_minty.py`, so both files must be in the same directory.)
 
 The following methods are tested:
 - Algorithm P (Path Sampling), 10^7 samples;
@@ -30,19 +30,19 @@ the programs also compute the exact standard deviation of the estimate.
 For computing the exact variance, the programs need a lot of memory.
 It is preferable to run these programs with the pypy interpreter
 instead of the standard python interpreter, which may
-have a "MemoryError" on larger instances.
+generate a "MemoryError" on larger instances.
 
-The results are logged to the standard output (see the files L-...log),
-and they are written to files of the form results-PERM-n.py and results-KM-n.py,
+The results are logged to the standard output (see the files `L-...log`),
+and they are written to files of the form `results-PERM-n.py` and `results-KM-n.py`,
 for further processing.
-The python script analyze.py reads these result files and creates
+The python script `analyze.py` reads these result files and creates
 tables in LaTeX format
 for the paper
-in the subdirectory "tables".
+in the subdirectory `tables`.
 The file
-estimating-DAG-full-tables.pdf
+`estimating-DAG-full-tables.pdf`
 (generated from 
-estimating-DAG-full-tables.tex) in that directory
+`estimating-DAG-full-tables.tex`) in that directory
 contains the full results for the permutation DAG for n=7,8,...,12,
 and for Klee-Minty cubes of dimension n=8,10,12,...,18.
 
