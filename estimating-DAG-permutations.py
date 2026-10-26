@@ -1,5 +1,5 @@
 from itertools import permutations
-from random import choice, choices, random, randint, seed #,sample
+from random import choice, choices, shuffle, random, randint, seed #,sample
 from collections import defaultdict
 from math import sqrt, factorial
 import sys
@@ -187,7 +187,6 @@ def bucket_sampling(report_levels=False):
                     indeg_new = n-1-outdeg_new
                     insert(tuple(q), W/indeg_new, outdeg_new, Store)
                     swap(q,i) # undo the change               
-                    insert(q, W/indeg_new, outdeg_new, Store)
                 break
         else:
             active = False
@@ -238,6 +237,7 @@ def crowd_sampling():
         if len(new_A) <= crowd_budget_B:
             A = new_A
         else:
+            shuffle(new_A) # random partition into classes new_A[k::B]
             A = [random_selection_from_class(new_A,k,crowd_budget_B)
                  for k in range(crowd_budget_B)]
     return X,num_visited,num_inserted, num_inserted-num_condensed
