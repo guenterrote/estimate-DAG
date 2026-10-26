@@ -1,5 +1,5 @@
 from itertools import permutations
-from random import choice, choices, random, randint, seed #,sample
+from random import choice, choices, shuffle, random, randint, seed #,sample
 from collections import defaultdict
 from math import sqrt
 import sys
@@ -11,7 +11,7 @@ if len(sys.argv)>1:
     n = int(sys.argv[1])
 
 num_samples = 10**7
-horde_limit = 10 # budget for SE        
+crowd_budget_B = 10 # budget for CS        
 problem = 'KM'
 
 
@@ -64,7 +64,7 @@ def compute_variance():
         Var[p] = d*V
     return mean[source_vertex], Var[source_vertex]
 
-def compute_variance_importance_sampling(use_size=0):
+def compute_variance_importance_sampling(use_weight="outdegree"):
     """compute mean and variance of the estimate,
     proceeding from the "leaves"/target towards the source vertex"""
     target = 2**n-1
@@ -79,13 +79,15 @@ def compute_variance_importance_sampling(use_size=0):
         for i in successors:
             v = swap(u,i)
             outdeg_new = outdegree(v)
-            if use_size==1:
-                weight = 2**n-v # size of reachable subgraph
-            elif use_size==2:
-                weight = (2**n-v)/indegree(v)
-            else:
+            if use_weight=="outdegree":
                 weight = max(outdeg_new,1)
                 # at least 1: makes variance slightly worse
+            elif use_weight=="reachable_size":
+                weight = 2**n-v # size of reachable subgraph
+            elif use_weight=="size_by_indegree":
+                weight = (2**n-v)/indegree(v)
+            else:
+                raise ValueError()
             prob_out.append(weight) 
             mu += mean[v]/(n-outdeg_new)
         tot_prob = sum(prob_out)
@@ -118,15 +120,15 @@ if __name__ == "__main__":
     print(f"P    mean={Me}, variance={Va}={Va:g}, S.D.={sqrt(Va)}={sqrt(Va):g}")
     commit_to_file(Me,Va, 'Algorithm P:', true_value, resultfile, problem)
 
-    Me_IS,Va_IS = compute_variance_importance_sampling()
+    Me_IS,Va_IS = compute_variance_importance_sampling("outdegree")
     print(f"IS   mean={Me_IS}, variance={Va_IS}={Va_IS:g}, S.D.={sqrt(Va_IS)}={sqrt(Va_IS):g}")
     commit_to_file(Me_IS,Va_IS, "Importance sampling (IS) by outdegree:", true_value, resultfile, problem)
 
-    Me_IS,Va_IS = compute_variance_importance_sampling(1)
+    Me_IS,Va_IS = compute_variance_importance_sampling("reachable_size")
     print(f"IS*  mean={Me_IS}, variance={Va_IS}={Va_IS:g}, S.D.={sqrt(Va_IS)}={sqrt(Va_IS):g}")
     commit_to_file(Me_IS,Va_IS, "Importance sampling (IS*) by reachable size:", true_value, resultfile, problem)
     
-    Me_IS,Va_IS = compute_variance_importance_sampling(2)
+    Me_IS,Va_IS = compute_variance_importance_sampling("size_by_indegree")
     print(f"IS** mean={Me_IS}, variance={Va_IS}={Va_IS:g}, S.D.={sqrt(Va_IS)}={sqrt(Va_IS):g}")
     commit_to_file(Me_IS,Va_IS, "Importance sampling (IS**) with size/indegree:", true_value, resultfile, problem)
 
@@ -141,8 +143,8 @@ def insert(p,W,stratum,Store):
             p = p_old
     Store[stratum] = (p,W_total)
 
-def heuristic_sampling(report_levels=False):
-    """according to Pang Chen.
+def bucket_sampling(report_levels=False):
+    """heuristic sampling according to Pang Chen.
     stratum = outdegree
     """
     Store = [None]*(n+1)
@@ -194,14 +196,15 @@ def path_sampling():
 
 def random_selection_from_class(S,k,n):
     # from the k-th class out of n almost equal classes
+    shuffle(S) 
     bucket = S[k::n]
     vertices = [x for x,w in bucket]
     weights =  [w for x,w in bucket]
     return (choices(vertices, weights)[0], # weighted selection.
             sum(weights))       
 
-def stochastic_estimation():
-    "Algorithm SE" # horde sampling
+def crowd_sampling():
+    "Algorithm CS" # crowd sampling
     num_visited = 0
     num_inserted = 0
     num_condensed = 0 # after eliminating multiple equal elements
@@ -218,14 +221,14 @@ def stochastic_estimation():
                 new_A[v] += W/indegree(v)
         num_condensed += len(new_A)
         new_A = list(new_A.items())
-        if len(new_A) <= horde_limit:
+        if len(new_A) <= crowd_budget_B:
             A = new_A
         else:
-            A = [random_selection_from_class(new_A,k,horde_limit)
-                 for k in range(horde_limit)]
+            A = [random_selection_from_class(new_A,k,crowd_budget_B)
+                 for k in range(crowd_budget_B)]
     return X,num_visited,num_inserted, num_inserted-num_condensed
 
-def importance_sampling(use_size=0):
+def importance_sampling(use_weight="outdegree"):
     num_visited = 0
     X = 0
     u = source_vertex
@@ -240,14 +243,15 @@ def importance_sampling(use_size=0):
         prob_out = []
         for i in succ:
             v = swap(u,i)
-            if use_size==1:
+            if use_weight=="outdegree":
+                weight = max(outdegree(v),1)
+                # at least 1: makes variance slightly worse
+            elif use_weight=="reachable_size":
                 weight = 2**n-v # size of reachable subgraph
-            elif use_size==2:
-                # also take into account the indegree
+            elif use_weight=="size_by_indegree":
                 weight = (2**n-v)/indegree(v)
             else:
-                weight = max(outdegree(v), 1) # at least 1
-                # increasing to 1 makes variance slightly worse
+                raise ValueError()
             prob_out.append(weight) 
         tot_prob = sum(prob_out)
         ind = choices(range(d), prob_out)[0] # weighted selection.
@@ -255,10 +259,10 @@ def importance_sampling(use_size=0):
         u = swap(u,i)
         W *= tot_prob/(prob_out[ind]*indegree(u))
 
-def importance_sampling_1():
-    return importance_sampling(use_size=1)
-def importance_sampling_2():
-    return importance_sampling(use_size=2)
+def importance_sampling_reachable_size():
+    return importance_sampling(use_weight="reachable_size")
+def importance_sampling_size_by_indegree():
+    return importance_sampling(use_weight="size_by_indegree")
 
 powers_of_ten = [10**i for i in range(1,20)]
 
@@ -275,7 +279,8 @@ def run_method(resultfile, problem,n,name,method,rand_seed,num_samples,true_valu
     for m in range(1,1+num_samples):
         result = method()
         if len(result)==2:
-            X,visited = method()
+            X,visited = result
+            # X,visited = method() # this was here by mistake. (inconsequential)
         elif len(result)==3:
             X,visited,inserted = result
             tot_inserted += inserted
@@ -319,21 +324,21 @@ def run_method(resultfile, problem,n,name,method,rand_seed,num_samples,true_valu
 
 if __name__ == "__main__":
     print("first run P: ", path_sampling())
-    print("first run HS:", heuristic_sampling())
+    print("first run BS:", bucket_sampling())
     print("first run IS:", importance_sampling())
-    print("first run SE:", stochastic_estimation())
+    print("first run CS:", crowd_sampling())
     sys.stdout.flush()
 
     for name,method,rand_seed,num_s in [
         ("Algorithm P:", path_sampling, 755223781,num_samples),
         ("Importance sampling (IS) by outdegree:", importance_sampling, None,num_samples),
         ("Importance sampling (IS*) by reachable size:",
-         importance_sampling_1, None,num_samples),
+         importance_sampling_reachable_size, None,num_samples),
         ("Importance sampling (IS**) with size/indegree:",
-         importance_sampling_2, None,num_samples),
-        ("Heuristic sampling (HS) by outdegree:", heuristic_sampling, None,
+         importance_sampling_size_by_indegree, None,num_samples),
+        ("Bucket sampling (BS) by outdegree:", bucket_sampling, None,
            num_samples//10), # heuristic sampling does more work per sample.
-        (f"Stochastic estimation (SE) ({horde_limit=}):", stochastic_estimation, None,num_samples//10),
+        (f"Crowd sampling (CS) ({crowd_budget_B=}):", crowd_sampling, None,num_samples//10),
           ]:
         run_method(resultfile, problem,n,name,method,rand_seed,num_s, true_value)
     resultfile.close()

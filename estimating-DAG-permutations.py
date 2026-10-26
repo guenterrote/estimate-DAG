@@ -13,7 +13,7 @@ if len(sys.argv)>1:
     n = int(sys.argv[1])
 
 num_samples = 10**7
-horde_limit = 10 # budget for SE
+crowd_budget_B = 10 # budget for CS
 problem = 'PERM'
 print(f"PERMUTATIONS == {n = }, {num_samples} samples")
 true_value = factorial(n)
@@ -143,7 +143,7 @@ commit_to_file(Me_IS,Va_IS, "Importance sampling (IS) by outdegree:", true_value
 
 
 def insert(p,W,stratum,Store):
-    z = Store.get(stratum)
+    z = Store[stratum]
     if z is None:
         W_total = W
     else:
@@ -153,27 +153,27 @@ def insert(p,W,stratum,Store):
             p = p_old
     Store[stratum] = (p,W_total)
 
-def heuristic_sampling(report_levels=False):
-    """according to Pang Chen.
-    stratum = (level,outdegree)
+def bucket_sampling(report_levels=False):
+    """heuristic sampling according to Pang Chen.
+    stratum = outdegree
     """
-    Store = dict()
+    Store = [None]*(n+1)
     X = 0
-    level = num_visited = num_inserted = 0
-    Store[0,n-1] = (source_vertex,1) # start with W=1
-    level_size = 99
-    while level_size:
-        level_size = 0
-        for outdeg in range(n):
-            z = Store.get((level,outdeg))
+    num_visited = 0
+    num_inserted = 0
+    Store[n] = source_vertex,1 # start with W=1
+    active = True
+    while active:
+        for outdeg in range(n,-1,-1):
+            z = Store[outdeg] # expand highest outdegree
             #print(level,outdeg,z,Store)
-            if z:
+            if z is not None:
+                Store[outdeg] = None
+                num_visited += 1
                 # expand children
-                level_size +=1
-                p0,W = z
+                p0,W = z                
                 X += W
                 q = list(p0)
-                #print(level,outdeg,q,W)
                 successors = outnbrs(q)
                 d = len(successors)
                 num_inserted += d
@@ -183,16 +183,15 @@ def heuristic_sampling(report_levels=False):
                     outdeg_new = (d-1 +
                                   (1 if i>0   and q[i]<q[i-1]<q[i+1] else 0) +
                                   (1 if i<n-2 and q[i]<q[i+2]<q[i+1] else 0))
-                    #assert outdeg_new == n-1-indegree(q)
+                    assert outdeg_new == n-1-indegree(q)
                     indeg_new = n-1-outdeg_new
-                    insert(tuple(q), W/indeg_new, (level+1,outdeg_new), Store)
+                    insert(tuple(q), W/indeg_new, outdeg_new, Store)
                     swap(q,i) # undo the change               
-        if report_levels:
-            print(f"level {level}: {level_size} nodes visited.")
-        num_visited += level_size
-        level += 1
-    return X,num_visited,num_inserted
-                
+                    insert(q, W/indeg_new, outdeg_new, Store)
+                break
+        else:
+            active = False
+    return X,num_visited,num_inserted                
 
 def path_sampling():
     "Algorithm P"
@@ -213,8 +212,8 @@ def path_sampling():
         swap(u,i)
         W /= indegree(u)
 
-def stochastic_estimation():
-    "Algorithm SE" # horde sampling
+def crowd_sampling():
+    "Algorithm CS" # crowd sampling
     num_visited = 0
     num_inserted = 0
     num_condensed = 0 # after eliminating multiple equal elements
@@ -236,11 +235,11 @@ def stochastic_estimation():
                 swap(u,i) # undo
         num_condensed += len(new_A)
         new_A = list(new_A.items())
-        if len(new_A) <= horde_limit:
+        if len(new_A) <= crowd_budget_B:
             A = new_A
         else:
-            A = [random_selection_from_class(new_A,k,horde_limit)
-                 for k in range(horde_limit)]
+            A = [random_selection_from_class(new_A,k,crowd_budget_B)
+                 for k in range(crowd_budget_B)]
     return X,num_visited,num_inserted, num_inserted-num_condensed
         
 
@@ -276,7 +275,7 @@ def importance_sampling():
             W *= tot_prob/(prob_out[ind]*indegree(u))
 
 print("first run P: ", path_sampling())
-print("first run HS:", heuristic_sampling())
+print("first run BS:", bucket_sampling())
 print("first run IS:", importance_sampling())
 
 
@@ -285,10 +284,10 @@ powers_of_ten = [10**i for i in range(1,20)]
 for name,method,rand_seed,num_s in [
         ("Algorithm P:", path_sampling, 327069990,num_samples),
         ("Importance sampling (IS) by outdegree:", importance_sampling, None,num_samples),
-        (f"Stochastic estimation (SE) ({horde_limit=}):", stochastic_estimation, None,
+        (f"Crowd sampling (CS) ({crowd_budget_B=}):", crowd_sampling, None,
            num_samples//10),
-        ("Heuristic sampling (HS) by outdegree:", heuristic_sampling, None,
-           num_samples//10), # heuristic sampling does more work per sample.
+        ("Bucket sampling (BS) by outdegree:", bucket_sampling, None,
+           num_samples//10), # bucket sampling does more work per sample.
     ]:
     run_method(resultfile, problem,n,name,method,rand_seed,num_s, true_value)
 resultfile.close()
