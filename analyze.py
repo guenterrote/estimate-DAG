@@ -3,6 +3,7 @@ from collections import defaultdict
 
 true_SD = {}
 results = result = {}
+inf = float('inf') # result files may contain "true_SD[...] = inf" (floating-point overflow)
 
 filenames = """
 results-KM-8.py  results-KM-10.py results-KM-12.py
@@ -164,7 +165,9 @@ for meth0,prob0,PROB,name_suffix,list_n in tables:
             percent = avg_saved[n]/avg_inserted[n]*100
             savedline += rf'&\multicolumn4{{l|}}{{\#saved: avg\ = {avg_saved[n]:0.1f} = {percent:0.1f}\%}}'
         SD_value = true_SD.get((prob,n,meth0))
-        if SD_value is not None:
+        if SD_value == inf:
+            t_SD = r"±\rlap{(overflow)"
+        elif SD_value is not None:
             t_SD = fr"±\rlap{{${SD_value:1.3e}$"
         else:
             t_SD = r"$&$\rlap{"

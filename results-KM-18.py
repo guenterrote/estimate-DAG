@@ -1,4 +1,4 @@
-#true_SD['KM',18,'Algorithm P:'] = inf # infinity, calculation exceeds floating-point range
+true_SD['KM',18,'Algorithm P:'] = inf # infinity, calculation exceeds floating-point range
 true_SD['KM',18,'Importance sampling (IS) by outdegree:'] = 1.6405303759216811e+69
 true_SD['KM',18,'Importance sampling (IS*) by reachable size:'] = 4.871677784212314e+113
 true_SD['KM',18,'Importance sampling (IS**) with size/indegree:'] = 2.71124624710563e+26
