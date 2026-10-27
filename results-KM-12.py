@@ -3,162 +3,162 @@ true_SD['KM',12,'Importance sampling (IS) by outdegree:'] = 77621021556.90926
 true_SD['KM',12,'Importance sampling (IS*) by reachable size:'] = 602511327092.2672
 true_SD['KM',12,'Importance sampling (IS**) with size/indegree:'] = 941934.8529221206
 result['KM',12,'Algorithm P:',10] = {
-              'mean' : 1046.350735906624, 's.d.': 2134.4488005014196, 'max': 6810.035024758203, 'CD': 0.65083674059421,
-              'avg.#visited': 27.4, 'max.#vis': 50,
+              'mean' : 198.77492797560316, 's.d.': 335.7983108863239, 'max': 1054.0547985371613, 'CD': 0.5302755278404788,
+              'avg.#visited': 24.0, 'max.#vis': 40,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Algorithm P:',100] = {
-              'mean' : 478.3650425494415, 's.d.': 1484.7542488676204, 'max': 12122.163706223231, 'CD': 0.25340822652128353,
-              'avg.#visited': 21.74, 'max.#vis': 60,
+              'mean' : 771.3318714896428, 's.d.': 3045.1753018147483, 'max': 24149.541931602573, 'CD': 0.31308886387598006,
+              'avg.#visited': 21.38, 'max.#vis': 60,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Algorithm P:',1000] = {
-              'mean' : 1787.5821932717986, 's.d.': 24370.04020802783, 'max': 696568.4820136052, 'CD': 0.3896707433288318,
-              'avg.#visited': 21.244, 'max.#vis': 76,
+              'mean' : 1068.5401729331445, 's.d.': 10497.308307483258, 'max': 281391.3656573019, 'CD': 0.2633418684529962,
+              'avg.#visited': 20.89, 'max.#vis': 76,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Algorithm P:',10000] = {
-              'mean' : 1118.2543234227135, 's.d.': 16573.18158265395, 'max': 1053425.6793002915, 'CD': 0.09420269228881703,
-              'avg.#visited': 20.768, 'max.#vis': 76,
+              'mean' : 1902.2726649150695, 's.d.': 85596.98357032448, 'max': 8386635.926163193, 'CD': 0.44087454342606713,
+              'avg.#visited': 20.615, 'max.#vis': 76,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Algorithm P:',100000] = {
-              'mean' : 1499.8546959636783, 's.d.': 36213.46972477615, 'max': 5761733.054545455, 'CD': 0.03841527495997509,
-              'avg.#visited': 20.63036, 'max.#vis': 80,
+              'mean' : 1786.0583155918912, 's.d.': 60458.5999380351, 'max': 9699001.102904372, 'CD': 0.05430394415587808,
+              'avg.#visited': 20.6, 'max.#vis': 80,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Algorithm P:',1000000] = {
-              'mean' : 2649.293281434425, 's.d.': 350315.8821002129, 'max': 270946053.16759455, 'CD': 0.10227106793585887,
-              'avg.#visited': 20.607586, 'max.#vis': 86,
+              'mean' : 2206.705594982712, 's.d.': 212994.0263578095, 'max': 152267603.68009698, 'CD': 0.06900222849223796,
+              'avg.#visited': 20.615238, 'max.#vis': 100,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Algorithm P:',10000000] = {
-              'mean' : 3542.396862444303, 's.d.': 2271640.360124909, 'max': 6582684707.818182, 'CD': 0.18582572657531202,
-              'avg.#visited': 20.598492, 'max.#vis': 94,
+              'mean' : 3103.9215171733085, 's.d.': 2132839.9204890337, 'max': 6582684707.818182, 'CD': 0.2120763901856941,
+              'avg.#visited': 20.6057064, 'max.#vis': 100,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS) by outdegree:',10] = {
-              'mean' : 2028.6150218433236, 's.d.': 3386.043995937465, 'max': 10185.046691294525, 'CD': 0.5020689771901506,
-              'avg.#visited': 34.2, 'max.#vis': 74,
+              'mean' : 503.535997043693, 's.d.': 668.7319153145187, 'max': 1988.371265292482, 'CD': 0.394881652347875,
+              'avg.#visited': 29.2, 'max.#vis': 52,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS) by outdegree:',100] = {
-              'mean' : 2533.0140511351483, 's.d.': 13646.150975796141, 'max': 133176.71196804676, 'CD': 0.5257638105416935,
-              'avg.#visited': 29.38, 'max.#vis': 74,
+              'mean' : 685.5498772588103, 's.d.': 1676.87029732392, 'max': 10458.82293666271, 'CD': 0.1525610795597046,
+              'avg.#visited': 29.14, 'max.#vis': 68,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS) by outdegree:',1000] = {
-              'mean' : 1699.2189685844146, 's.d.': 9893.976449123069, 'max': 179258.49347860098, 'CD': 0.10549464006274463,
-              'avg.#visited': 29.33, 'max.#vis': 74,
+              'mean' : 1854.5494766626528, 's.d.': 15942.45342731942, 'max': 376137.33230651554, 'CD': 0.2028187099021979,
+              'avg.#visited': 29.248, 'max.#vis': 70,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS) by outdegree:',10000] = {
-              'mean' : 2083.954263684227, 's.d.': 30840.75440122599, 'max': 2622443.6876994628, 'CD': 0.12583979089172712,
-              'avg.#visited': 29.1222, 'max.#vis': 82,
+              'mean' : 2418.507193902505, 's.d.': 33458.88218639978, 'max': 2606372.9201022293, 'CD': 0.10776783822158428,
+              'avg.#visited': 29.3072, 'max.#vis': 86,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS) by outdegree:',100000] = {
-              'mean' : 2686.684078261224, 's.d.': 62037.95196096236, 'max': 10463445.988075282, 'CD': 0.03894557634348675,
-              'avg.#visited': 29.14678, 'max.#vis': 92,
+              'mean' : 6892.8973452950695, 's.d.': 1225298.9403581612, 'max': 385938640.5456237, 'CD': 0.5599077154530039,
+              'avg.#visited': 29.18042, 'max.#vis': 86,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS) by outdegree:',1000000] = {
-              'mean' : 4501.170454419911, 's.d.': 853275.3432019673, 'max': 648505556.9189508, 'CD': 0.14407487196627994,
-              'avg.#visited': 29.19908, 'max.#vis': 98,
+              'mean' : 3969.191136157582, 's.d.': 515233.9938226234, 'max': 385938640.5456237, 'CD': 0.09723357412292212,
+              'avg.#visited': 29.20244, 'max.#vis': 96,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS) by outdegree:',10000000] = {
-              'mean' : 4392.01664528182, 's.d.': 1200168.4747090198, 'max': 3004481429.400541, 'CD': 0.06840778785818454,
-              'avg.#visited': 29.2150758, 'max.#vis': 104,
+              'mean' : 3737.7436223223076, 's.d.': 470336.7950286188, 'max': 703226431.9261409, 'CD': 0.018814196557687318,
+              'avg.#visited': 29.2143716, 'max.#vis': 104,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS*) by reachable size:',10] = {
-              'mean' : 994.3735162569261, 's.d.': 1564.657758330494, 'max': 4561.981608173093, 'CD': 0.4587794760811358,
-              'avg.#visited': 32.6, 'max.#vis': 46,
+              'mean' : 472.8587361616881, 's.d.': 661.8994101127186, 'max': 2033.413713558863, 'CD': 0.43002562035008335,
+              'avg.#visited': 52.2, 'max.#vis': 66,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS*) by reachable size:',100] = {
-              'mean' : 1171.262940628703, 's.d.': 3682.9203772094625, 'max': 34416.650706486864, 'CD': 0.29384222374536084,
-              'avg.#visited': 28.66, 'max.#vis': 56,
+              'mean' : 2626.803675483594, 's.d.': 11882.455650116306, 'max': 86877.96814340146, 'CD': 0.33073643437554295,
+              'avg.#visited': 53.72, 'max.#vis': 86,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS*) by reachable size:',1000] = {
-              'mean' : 2154.2944975062437, 's.d.': 16630.307090929167, 'max': 404042.13828692463, 'CD': 0.18755195204491934,
-              'avg.#visited': 28.964, 'max.#vis': 70,
+              'mean' : 2166.967542851422, 's.d.': 27495.595681327013, 'max': 844024.1089697774, 'CD': 0.3894955010997356,
+              'avg.#visited': 53.162, 'max.#vis': 114,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS*) by reachable size:',10000] = {
-              'mean' : 2337.6665372924954, 's.d.': 30091.678097398915, 'max': 2260142.50227879, 'CD': 0.09668370001550801,
-              'avg.#visited': 29.2734, 'max.#vis': 82,
+              'mean' : 2403.257588147706, 's.d.': 36794.50357775764, 'max': 2256340.3827846306, 'CD': 0.09388674746778555,
+              'avg.#visited': 52.9458, 'max.#vis': 114,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS*) by reachable size:',100000] = {
-              'mean' : 3107.8384926659733, 's.d.': 98543.8664128206, 'max': 23659413.59528122, 'CD': 0.07612819537152218,
-              'avg.#visited': 29.23072, 'max.#vis': 90,
+              'mean' : 4349.078350336278, 's.d.': 599146.6238896932, 'max': 188382387.23986176, 'CD': 0.4331547331753536,
+              'avg.#visited': 53.02692, 'max.#vis': 120,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS*) by reachable size:',1000000] = {
-              'mean' : 3255.6232084831577, 's.d.': 165488.79534578728, 'max': 70417126.40029229, 'CD': 0.02162938457276223,
-              'avg.#visited': 29.215134, 'max.#vis': 96,
+              'mean' : 6346.52614486524, 's.d.': 2530326.028479765, 'max': 2354259338.120722, 'CD': 0.37095243671618267,
+              'avg.#visited': 52.972348, 'max.#vis': 138,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS*) by reachable size:',10000000] = {
-              'mean' : 3635.198473649654, 's.d.': 1014377.9702260513, 'max': 3109743773.369406, 'CD': 0.08554536419155394,
-              'avg.#visited': 29.21933, 'max.#vis': 112,
+              'mean' : 4877.850161058496, 's.d.': 3174542.888374707, 'max': 9302721086.991234, 'CD': 0.1907135475635959,
+              'avg.#visited': 52.9734336, 'max.#vis': 148,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS**) with size/indegree:',10] = {
-              'mean' : 2778.2532581661294, 's.d.': 5045.780587622665, 'max': 16701.91204961319, 'CD': 0.6011659304464488,
-              'avg.#visited': 50.2, 'max.#vis': 78,
+              'mean' : 868.0140452216845, 's.d.': 1456.5069193313932, 'max': 4921.551677767362, 'CD': 0.566989866680145,
+              'avg.#visited': 62.0, 'max.#vis': 106,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS**) with size/indegree:',100] = {
-              'mean' : 2231.1472263868714, 's.d.': 5569.070905722065, 'max': 46046.67760203915, 'CD': 0.2063811704465927,
-              'avg.#visited': 57.48, 'max.#vis': 104,
+              'mean' : 1704.5244722587495, 's.d.': 4347.422465630638, 'max': 40399.46737384254, 'CD': 0.23701312613193057,
+              'avg.#visited': 56.8, 'max.#vis': 106,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS**) with size/indegree:',1000] = {
-              'mean' : 4351.139053296537, 's.d.': 55366.25884042083, 'max': 1735862.2834932304, 'CD': 0.3989443366968692,
-              'avg.#visited': 58.474, 'max.#vis': 120,
+              'mean' : 3150.7645210581986, 's.d.': 13846.91702641522, 'max': 247271.99084132808, 'CD': 0.07847999721612983,
+              'avg.#visited': 58.694, 'max.#vis': 108,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS**) with size/indegree:',10000] = {
-              'mean' : 3611.683215935196, 's.d.': 46923.61719735531, 'max': 4000239.1895620283, 'CD': 0.11075830714921162,
-              'avg.#visited': 58.7008, 'max.#vis': 130,
+              'mean' : 3677.13131508455, 's.d.': 37719.848918486336, 'max': 3328606.9407420857, 'CD': 0.09052184041095497,
+              'avg.#visited': 58.4732, 'max.#vis': 130,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS**) with size/indegree:',100000] = {
-              'mean' : 3851.2665802038514, 's.d.': 58920.45966780625, 'max': 10001452.394985154, 'CD': 0.025969255014426363,
-              'avg.#visited': 58.70356, 'max.#vis': 130,
+              'mean' : 3716.9836865438942, 's.d.': 52576.613430929894, 'max': 12635794.966744533, 'CD': 0.033994754974277216,
+              'avg.#visited': 58.59652, 'max.#vis': 136,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS**) with size/indegree:',1000000] = {
-              'mean' : 4031.663236233057, 's.d.': 120955.43340488723, 'max': 72521430.00028645, 'CD': 0.017987968178623494,
-              'avg.#visited': 58.70261, 'max.#vis': 144,
+              'mean' : 4268.107159122824, 's.d.': 240115.98461547273, 'max': 218028383.36535007, 'CD': 0.05108315589015319,
+              'avg.#visited': 58.659668, 'max.#vis': 148,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
 result['KM',12,'Importance sampling (IS**) with size/indegree:',10000000] = {
-              'mean' : 4043.828739510848, 's.d.': 137889.95887183354, 'max': 293162481.1171104, 'CD': 0.007249626529746956,
-              'avg.#visited': 58.6794246, 'max.#vis': 160,
+              'mean' : 4053.0494309908304, 's.d.': 121873.97630996625, 'max': 218028383.36535007, 'CD': 0.005379366501139605,
+              'avg.#visited': 58.661125, 'max.#vis': 152,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
-result['KM',12,'Heuristic sampling (HS) by outdegree:',10] = {
-              'mean' : 2930.839487535203, 's.d.': 2237.036984263907, 'max': 7842.637873154729, 'CD': 0.26759015314585805,
-              'avg.#visited': 453.9, 'max.#vis': 849,
-              "avg.#inserted": 2685.20, "avg.#saved": 0.00 }
-result['KM',12,'Heuristic sampling (HS) by outdegree:',100] = {
-              'mean' : 3486.74365782253, 's.d.': 5502.115248163092, 'max': 36959.62462003199, 'CD': 0.10600040681830122,
-              'avg.#visited': 536.57, 'max.#vis': 1833,
-              "avg.#inserted": 3076.83, "avg.#saved": 0.00 }
-result['KM',12,'Heuristic sampling (HS) by outdegree:',1000] = {
-              'mean' : 3711.7598328745867, 's.d.': 13201.911777021607, 'max': 278744.2397351254, 'CD': 0.07509759582673506,
-              'avg.#visited': 545.698, 'max.#vis': 2583,
-              "avg.#inserted": 3114.49, "avg.#saved": 0.00 }
-result['KM',12,'Heuristic sampling (HS) by outdegree:',10000] = {
-              'mean' : 3964.3214234489546, 's.d.': 18223.7165870843, 'max': 1149260.0240063479, 'CD': 0.028990081813459342,
-              'avg.#visited': 545.0249, 'max.#vis': 2690,
-              "avg.#inserted": 3106.17, "avg.#saved": 0.00 }
-result['KM',12,'Heuristic sampling (HS) by outdegree:',100000] = {
-              'mean' : 3993.5342056070817, 's.d.': 27014.109221954255, 'max': 4975958.811324207, 'CD': 0.012460038039333085,
-              'avg.#visited': 542.20789, 'max.#vis': 3446,
-              "avg.#inserted": 3090.86, "avg.#saved": 0.00 }
-result['KM',12,'Heuristic sampling (HS) by outdegree:',1000000] = {
-              'mean' : 4104.368069903404, 's.d.': 44370.152171674636, 'max': 20530090.600195494, 'CD': 0.005002010114721185,
-              'avg.#visited': 543.08222, 'max.#vis': 4889,
-              "avg.#inserted": 3096.08, "avg.#saved": 0.00 }
-result['KM',12,'Stochastic estimation (SE) (horde_limit=10):',10] = {
-              'mean' : 2741.1484824183344, 's.d.': 2785.4861109108556, 'max': 9824.034455593239, 'CD': 0.3583911823312155,
-              'avg.#visited': 1006.4, 'max.#vis': 1241,
-              "avg.#inserted": 4131.80, "avg.#saved": 433.30 }
-result['KM',12,'Stochastic estimation (SE) (horde_limit=10):',100] = {
-              'mean' : 4860.161872773508, 's.d.': 14275.068789972796, 'max': 138147.69240619088, 'CD': 0.2842450437301079,
-              'avg.#visited': 929.12, 'max.#vis': 1261,
-              "avg.#inserted": 3849.63, "avg.#saved": 411.34 }
-result['KM',12,'Stochastic estimation (SE) (horde_limit=10):',1000] = {
-              'mean' : 3988.3262124219023, 's.d.': 8651.251741360074, 'max': 138147.69240619088, 'CD': 0.034638012300980014,
-              'avg.#visited': 936.268, 'max.#vis': 1641,
-              "avg.#inserted": 3887.61, "avg.#saved": 414.26 }
-result['KM',12,'Stochastic estimation (SE) (horde_limit=10):',10000] = {
-              'mean' : 4124.82307566806, 's.d.': 11867.522381913212, 'max': 698079.6691484373, 'CD': 0.016923869371909383,
-              'avg.#visited': 936.4984, 'max.#vis': 1641,
-              "avg.#inserted": 3890.37, "avg.#saved": 415.38 }
-result['KM',12,'Stochastic estimation (SE) (horde_limit=10):',100000] = {
-              'mean' : 4069.6201334497064, 's.d.': 12271.13084941558, 'max': 1070191.9370869594, 'CD': 0.0026297096583798025,
-              'avg.#visited': 937.81505, 'max.#vis': 1720,
-              "avg.#inserted": 3892.66, "avg.#saved": 416.33 }
-result['KM',12,'Stochastic estimation (SE) (horde_limit=10):',1000000] = {
-              'mean' : 4082.0728697400264, 's.d.': 13309.83487467298, 'max': 3929953.3768863822, 'CD': 0.0009627347434237909,
-              'avg.#visited': 937.668374, 'max.#vis': 1839,
-              "avg.#inserted": 3892.11, "avg.#saved": 416.23 }
+result['KM',12,'Bucket sampling (BS) by outdegree:',10] = {
+              'mean' : 2912.5082670179772, 's.d.': 3257.4895782309713, 'max': 9796.38316210143, 'CD': 0.3363555486876482,
+              'avg.#visited': 466.9, 'max.#vis': 1071,
+              "avg.#inserted": 2684.70, "avg.#saved": 0.00 }
+result['KM',12,'Bucket sampling (BS) by outdegree:',100] = {
+              'mean' : 2805.3499392123103, 's.d.': 3774.773593460178, 'max': 20825.772675875778, 'CD': 0.0742359175401956,
+              'avg.#visited': 527.21, 'max.#vis': 1970,
+              "avg.#inserted": 3009.74, "avg.#saved": 0.00 }
+result['KM',12,'Bucket sampling (BS) by outdegree:',1000] = {
+              'mean' : 4418.83213154933, 's.d.': 20658.099727670342, 'max': 477574.5999836568, 'CD': 0.1080771085585932,
+              'avg.#visited': 546.944, 'max.#vis': 2556,
+              "avg.#inserted": 3127.18, "avg.#saved": 0.00 }
+result['KM',12,'Bucket sampling (BS) by outdegree:',10000] = {
+              'mean' : 3838.848102959179, 's.d.': 17370.984207137375, 'max': 1209118.8850908692, 'CD': 0.031496919197162784,
+              'avg.#visited': 544.5764, 'max.#vis': 3202,
+              "avg.#inserted": 3103.40, "avg.#saved": 0.00 }
+result['KM',12,'Bucket sampling (BS) by outdegree:',100000] = {
+              'mean' : 3981.987386412713, 's.d.': 27084.573564577742, 'max': 4813566.986337406, 'CD': 0.01208835317450326,
+              'avg.#visited': 542.65249, 'max.#vis': 3886,
+              "avg.#inserted": 3093.33, "avg.#saved": 0.00 }
+result['KM',12,'Bucket sampling (BS) by outdegree:',1000000] = {
+              'mean' : 4106.548523126836, 's.d.': 50004.056797143116, 'max': 36319344.62303248, 'CD': 0.008844250693372536,
+              'avg.#visited': 542.442072, 'max.#vis': 4291,
+              "avg.#inserted": 3092.27, "avg.#saved": 0.00 }
+result['KM',12,'Crowd sampling (CS) (crowd_budget_B=10):',10] = {
+              'mean' : 1747.441375342555, 's.d.': 1241.1426836731332, 'max': 3995.059013573003, 'CD': 0.2286233501132387,
+              'avg.#visited': 1028.7, 'max.#vis': 1361,
+              "avg.#inserted": 4198.90, "avg.#saved": 448.00 }
+result['KM',12,'Crowd sampling (CS) (crowd_budget_B=10):',100] = {
+              'mean' : 3533.032418308856, 's.d.': 6814.259070237198, 'max': 57008.32758350791, 'CD': 0.16135806534941416,
+              'avg.#visited': 964.04, 'max.#vis': 1361,
+              "avg.#inserted": 3967.19, "avg.#saved": 431.16 }
+result['KM',12,'Crowd sampling (CS) (crowd_budget_B=10):',1000] = {
+              'mean' : 3861.781783760099, 's.d.': 11011.876592843248, 'max': 255398.90636522367, 'CD': 0.06613499173859315,
+              'avg.#visited': 957.792, 'max.#vis': 1740,
+              "avg.#inserted": 3936.87, "avg.#saved": 431.17 }
+result['KM',12,'Crowd sampling (CS) (crowd_budget_B=10):',10000] = {
+              'mean' : 4172.777347243133, 's.d.': 12451.856524517483, 'max': 504036.791663067, 'CD': 0.012079168134769369,
+              'avg.#visited': 969.0168, 'max.#vis': 1741,
+              "avg.#inserted": 4002.37, "avg.#saved": 432.66 }
+result['KM',12,'Crowd sampling (CS) (crowd_budget_B=10):',100000] = {
+              'mean' : 4107.127622957051, 's.d.': 11862.738619404887, 'max': 851822.2207292281, 'CD': 0.002074009621634141,
+              'avg.#visited': 970.91937, 'max.#vis': 1760,
+              "avg.#inserted": 4011.07, "avg.#saved": 433.32 }
+result['KM',12,'Crowd sampling (CS) (crowd_budget_B=10):',1000000] = {
+              'mean' : 4104.144991171945, 's.d.': 13739.711659028646, 'max': 3457418.8740978427, 'CD': 0.0008424212306180176,
+              'avg.#visited': 971.007942, 'max.#vis': 1880,
+              "avg.#inserted": 4012.00, "avg.#saved": 433.34 }

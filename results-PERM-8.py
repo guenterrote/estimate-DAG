@@ -56,51 +56,51 @@ result['PERM',8,'Importance sampling (IS) by outdegree:',10000000] = {
               'mean' : 40289.75839192445, 's.d.': 540992.0626696235, 'max': 725470391.3363501, 'CD': 0.0018006322705617442,
               'avg.#visited': 29.0, 'max.#vis': 29,
               "avg.#inserted": 0.00, "avg.#saved": 0.00 }
-result['PERM',8,'Stochastic estimation (SE) (horde_limit=10):',10] = {
-              'mean' : 37629.012820354736, 's.d.': 21347.719211946853, 'max': 73101.26805416455, 'CD': 0.19426836521903584,
-              'avg.#visited': 258.7, 'max.#vis': 264,
-              "avg.#inserted": 878.00, "avg.#saved": 191.90 }
-result['PERM',8,'Stochastic estimation (SE) (horde_limit=10):',100] = {
-              'mean' : 41642.052409705444, 's.d.': 31007.095370664418, 'max': 177240.55119768713, 'CD': 0.042562875973033924,
-              'avg.#visited': 260.37, 'max.#vis': 265,
-              "avg.#inserted": 890.33, "avg.#saved": 188.75 }
-result['PERM',8,'Stochastic estimation (SE) (horde_limit=10):',1000] = {
-              'mean' : 40783.29572930221, 's.d.': 34004.68935970536, 'max': 251345.0103985325, 'CD': 0.0061629401426217915,
-              'avg.#visited': 260.21, 'max.#vis': 265,
-              "avg.#inserted": 892.64, "avg.#saved": 189.66 }
-result['PERM',8,'Stochastic estimation (SE) (horde_limit=10):',10000] = {
-              'mean' : 40390.555430222244, 's.d.': 36143.81527482971, 'max': 714578.8285986404, 'CD': 0.0017691730677809809,
-              'avg.#visited': 260.2267, 'max.#vis': 266,
-              "avg.#inserted": 893.05, "avg.#saved": 189.59 }
-result['PERM',8,'Stochastic estimation (SE) (horde_limit=10):',100000] = {
-              'mean' : 40330.07398425941, 's.d.': 34894.124700673034, 'max': 849696.7292753845, 'CD': 0.00021068563613521168,
-              'avg.#visited': 260.26673, 'max.#vis': 266,
-              "avg.#inserted": 893.33, "avg.#saved": 189.56 }
-result['PERM',8,'Stochastic estimation (SE) (horde_limit=10):',1000000] = {
-              'mean' : 40336.683103783114, 's.d.': 35324.69822104071, 'max': 1176444.8103620936, 'CD': 2.916563088083355e-05,
-              'avg.#visited': 260.260621, 'max.#vis': 266,
-              "avg.#inserted": 893.23, "avg.#saved": 189.60 }
-result['PERM',8,'Heuristic sampling (HS) by outdegree:',10] = {
-              'mean' : 34023.33998359161, 's.d.': 41991.355752477204, 'max': 147547.40617753286, 'CD': 0.4336652611080815,
-              'avg.#visited': 73.2, 'max.#vis': 83,
-              "avg.#inserted": 242.80, "avg.#saved": 0.00 }
-result['PERM',8,'Heuristic sampling (HS) by outdegree:',100] = {
-              'mean' : 47540.86476706262, 's.d.': 69429.67192043475, 'max': 476866.6386802733, 'CD': 0.10030668163416691,
-              'avg.#visited': 73.93, 'max.#vis': 90,
-              "avg.#inserted": 246.98, "avg.#saved": 0.00 }
-result['PERM',8,'Heuristic sampling (HS) by outdegree:',1000] = {
-              'mean' : 39992.24977617384, 's.d.': 47453.01619870204, 'max': 476866.6386802733, 'CD': 0.011923976304138204,
-              'avg.#visited': 74.08, 'max.#vis': 90,
-              "avg.#inserted": 246.43, "avg.#saved": 0.00 }
-result['PERM',8,'Heuristic sampling (HS) by outdegree:',10000] = {
-              'mean' : 39758.21042364584, 's.d.': 54078.207019294976, 'max': 1138037.0227114062, 'CD': 0.0028623949885696284,
-              'avg.#visited': 74.2109, 'max.#vis': 90,
-              "avg.#inserted": 246.88, "avg.#saved": 0.00 }
-result['PERM',8,'Heuristic sampling (HS) by outdegree:',100000] = {
-              'mean' : 40183.5577355154, 's.d.': 59067.55149827556, 'max': 2868591.709177875, 'CD': 0.0007138720090587025,
-              'avg.#visited': 74.25246, 'max.#vis': 92,
-              "avg.#inserted": 247.06, "avg.#saved": 0.00 }
-result['PERM',8,'Heuristic sampling (HS) by outdegree:',1000000] = {
-              'mean' : 40336.03640922383, 's.d.': 61807.595566431555, 'max': 5890614.0346691245, 'CD': 0.0001460384945835206,
-              'avg.#visited': 74.257215, 'max.#vis': 95,
-              "avg.#inserted": 247.08, "avg.#saved": 0.00 }
+result['PERM',8,'Crowd sampling (CS) (crowd_budget_B=10):',10] = {
+              'mean' : 51102.67115006359, 's.d.': 43393.36560773509, 'max': 155816.46994307495, 'CD': 0.3049086602254471,
+              'avg.#visited': 261.3, 'max.#vis': 265,
+              "avg.#inserted": 899.50, "avg.#saved": 177.90 }
+result['PERM',8,'Crowd sampling (CS) (crowd_budget_B=10):',100] = {
+              'mean' : 43250.168165137904, 's.d.': 33729.5804458951, 'max': 155816.46994307495, 'CD': 0.03602678938683801,
+              'avg.#visited': 261.08, 'max.#vis': 265,
+              "avg.#inserted": 896.95, "avg.#saved": 179.21 }
+result['PERM',8,'Crowd sampling (CS) (crowd_budget_B=10):',1000] = {
+              'mean' : 43252.03509859212, 's.d.': 39430.21652339857, 'max': 369860.77152882755, 'CD': 0.008551291764323635,
+              'avg.#visited': 261.204, 'max.#vis': 266,
+              "avg.#inserted": 894.49, "avg.#saved": 178.28 }
+result['PERM',8,'Crowd sampling (CS) (crowd_budget_B=10):',10000] = {
+              'mean' : 40068.359492620795, 's.d.': 35080.76537588519, 'max': 739693.6223779634, 'CD': 0.0018460791301280735,
+              'avg.#visited': 261.0963, 'max.#vis': 266,
+              "avg.#inserted": 893.21, "avg.#saved": 178.30 }
+result['PERM',8,'Crowd sampling (CS) (crowd_budget_B=10):',100000] = {
+              'mean' : 40222.48474607271, 's.d.': 35171.446861293865, 'max': 877280.1815799864, 'CD': 0.00021810690888897493,
+              'avg.#visited': 261.0842, 'max.#vis': 266,
+              "avg.#inserted": 893.38, "avg.#saved": 178.69 }
+result['PERM',8,'Crowd sampling (CS) (crowd_budget_B=10):',1000000] = {
+              'mean' : 40259.069741800355, 's.d.': 35176.99840900007, 'max': 1368739.3673988064, 'CD': 3.39982860055424e-05,
+              'avg.#visited': 261.091075, 'max.#vis': 266,
+              "avg.#inserted": 893.42, "avg.#saved": 178.66 }
+result['PERM',8,'Bucket sampling (BS) by outdegree:',10] = {
+              'mean' : 41711.28286179909, 's.d.': 68536.31586155562, 'max': 212393.8153736731, 'CD': 0.5091999113942192,
+              'avg.#visited': 74.0, 'max.#vis': 118,
+              "avg.#inserted": 269.00, "avg.#saved": 0.00 }
+result['PERM',8,'Bucket sampling (BS) by outdegree:',100] = {
+              'mean' : 39047.54632614885, 's.d.': 139504.45624537062, 'max': 1361419.034057224, 'CD': 0.3486567434188628,
+              'avg.#visited': 86.7, 'max.#vis': 183,
+              "avg.#inserted": 297.93, "avg.#saved": 0.00 }
+result['PERM',8,'Bucket sampling (BS) by outdegree:',1000] = {
+              'mean' : 34062.088795235235, 's.d.': 89284.02083331103, 'max': 1728008.3191154187, 'CD': 0.05073113188986639,
+              'avg.#visited': 84.965, 'max.#vis': 208,
+              "avg.#inserted": 291.75, "avg.#saved": 0.00 }
+result['PERM',8,'Bucket sampling (BS) by outdegree:',10000] = {
+              'mean' : 38986.69892616853, 's.d.': 134128.17821849632, 'max': 5971623.978588689, 'CD': 0.015317080294224229,
+              'avg.#visited': 84.0219, 'max.#vis': 238,
+              "avg.#inserted": 289.04, "avg.#saved": 0.00 }
+result['PERM',8,'Bucket sampling (BS) by outdegree:',100000] = {
+              'mean' : 39853.465058626505, 's.d.': 201507.74888791385, 'max': 46109921.225182675, 'CD': 0.011569865043692586,
+              'avg.#visited': 84.46279, 'max.#vis': 268,
+              "avg.#inserted": 290.66, "avg.#saved": 0.00 }
+result['PERM',8,'Bucket sampling (BS) by outdegree:',1000000] = {
+              'mean' : 40025.46129362298, 's.d.': 255219.5684962305, 'max': 128368483.86331815, 'CD': 0.003207170628756009,
+              'avg.#visited': 84.447575, 'max.#vis': 277,
+              "avg.#inserted": 290.63, "avg.#saved": 0.00 }
