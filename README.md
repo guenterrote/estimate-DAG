@@ -32,7 +32,9 @@ It is preferable to run these programs with the pypy interpreter
 instead of the standard python interpreter, which may
 generate a "MemoryError" on larger instances.
 
-The results are logged to the standard output (see the files `L-...log`),
+The results are logged to the standard output (see the files
+`L-...log`; the last part of the filename refers to the computer on
+which the program was run),
 and they are written to files of the form `results-PERM-n.py` and `results-KM-n.py`,
 for further processing.
 The python script `analyze.py` reads these result files and creates

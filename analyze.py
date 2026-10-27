@@ -17,13 +17,13 @@ for f in filenames:
     print("file",f)
     exec(open(f).read())
 # result files from before the renaming use the old method names
-old_names = {'Stochastic estimation (SE) (horde_limit=10):':
-                 'Crowd sampling (CS) (crowd_budget_B=10):',
-             'Heuristic sampling (HS) by outdegree:':
-                 'Bucket sampling (BS) by outdegree:'}
-for (prob,n,meth,m) in list(results):
-    if meth in old_names:
-        results[prob,n,old_names[meth],m] = results.pop((prob,n,meth,m))
+#old_names = {'Stochastic estimation (SE) (horde_limit=10):':
+#                 'Crowd sampling (CS) (crowd_budget_B=10):',
+#             'Heuristic sampling (HS) by outdegree:':
+#                 'Bucket sampling (BS) by outdegree:'}
+#for (prob,n,meth,m) in list(results):
+#    if meth in old_names:
+#        results[prob,n,old_names[meth],m] = results.pop((prob,n,meth,m))
 print(f"{len(results)=}")
 #print(result.keys())
 
