@@ -155,7 +155,7 @@ def insert(p,W,stratum,Store):
 
 def bucket_sampling(report_levels=False):
     """heuristic sampling according to Pang Chen.
-    stratum = outdegree
+    bucket = outdegree
     """
     Store = [None]*(n+1)
     X = 0
@@ -191,6 +191,47 @@ def bucket_sampling(report_levels=False):
         else:
             active = False
     return X,num_visited,num_inserted                
+
+def bucket_sampling_extended(report_levels=False):
+    """heuristic sampling according to Pang Chen.
+    stratum = (level,outdegree)
+    This version is not reported in the paper or in the table.
+    """
+    Store = dict()
+    X = 0
+    level = num_visited = num_inserted = 0
+    Store[0,n-1] = (source_vertex,1) # start with W=1
+    level_size = 99
+    while level_size:
+        level_size = 0
+        for outdeg in range(n):
+            z = Store.get((level,outdeg))
+            #print(level,outdeg,z,Store)
+            if z:
+                # expand children
+                level_size +=1
+                p0,W = z
+                X += W
+                q = list(p0)
+                #print(level,outdeg,q,W)
+                successors = outnbrs(q)
+                d = len(successors)
+                num_inserted += d
+                for i in successors:
+                    swap(q,i)
+                    # fast incremental computation of new outdegree
+                    outdeg_new = (d-1 +
+                                  (1 if i>0   and q[i]<q[i-1]<q[i+1] else 0) +
+                                  (1 if i<n-2 and q[i]<q[i+2]<q[i+1] else 0))
+                    #assert outdeg_new == n-1-indegree(q)
+                    indeg_new = n-1-outdeg_new
+                    insert(tuple(q), W/indeg_new, (level+1,outdeg_new), Store)
+                    swap(q,i) # undo the change               
+        if report_levels:
+            print(f"level {level}: {level_size} nodes visited.")
+        num_visited += level_size
+        level += 1
+    return X,num_visited,num_inserted
 
 def path_sampling():
     "Algorithm P"
