@@ -58,9 +58,9 @@ level 54, size 10
 level 55, size 1
 P mean=39916800.0, variance=4.039676896940722e+26=4.03968e+26, S.D.=20098947477270.35=2.00989e+13
 IS mean=39916800.0, variance=1.1562446917039737e+25=1.15624e+25, S.D.=3400359821701.1885=3.40036e+12
-first run P:  (63091.7683286971, 56, 0)
-first run HS: (555980.7699589137, 215, 1021)
-first run IS: (150390.3776497906, 56, 0)
+first run P:  (2982198.4367046426, 56, 0)
+first run BS: (114708.10413725385, 2753, 12720)
+first run IS: (127877.10537559513, 56, 0)
 Algorithm P: random seed = 327069990
     10 samples, avg.#visited=56.00, max.#vis=56, mean=125617.41±136739.7, max=378358.83, CD=0.30120
    100 samples, avg.#visited=56.00, max.#vis=56, mean=11415775.64±5.67766e+07, max=509700046.66, CD=0.44649
@@ -77,17 +77,21 @@ Importance sampling (IS) by outdegree: random seed = 46116262
 100000 samples, avg.#visited=56.00, max.#vis=56, mean=22871948.16±1.285595e+09, max=344003301558.95, CD=0.15040
 1000000 samples, avg.#visited=56.00, max.#vis=56, mean=40238558.17±6.982736e+09, max=5276559635640.19, CD=0.13113
 10000000 samples, avg.#visited=56.00, max.#vis=56, mean=30446498.89±3.634359e+09, max=5276559635640.19, CD=0.01733
-Stochastic estimation (SE) (horde_limit=10): random seed = 573571105
-    10 samples, avg.#visited=534.40, max.#vis=537, avg.#inserted=2587.20, avg.#saved=398.00, mean=22378645.37±1.629316e+07, max=46544440.04, CD=0.20799
-   100 samples, avg.#visited=533.63, max.#vis=537, avg.#inserted=2560.74, avg.#saved=408.14, mean=38544454.50±9.60442e+07, max=788154471.06, CD=0.20448
-  1000 samples, avg.#visited=532.85, max.#vis=538, avg.#inserted=2554.45, avg.#saved=407.11, mean=48943236.16±2.449e+08, max=5930330683.60, CD=0.12117
- 10000 samples, avg.#visited=532.93, max.#vis=539, avg.#inserted=2551.25, avg.#saved=408.87, mean=40249411.49±2.512493e+08, max=16083668938.38, CD=0.03996
-100000 samples, avg.#visited=532.97, max.#vis=540, avg.#inserted=2552.86, avg.#saved=408.72, mean=38882958.18±2.008046e+08, max=18068310549.81, CD=0.00465
-1000000 samples, avg.#visited=532.98, max.#vis=540, avg.#inserted=2552.66, avg.#saved=408.60, mean=39996802.75±3.204794e+08, max=130131556444.67, CD=0.00325
-Heuristic sampling (HS) by outdegree: random seed = 434600939
-    10 samples, avg.#visited=205.80, max.#vis=223, avg.#inserted=942.20, mean=28221404.61±3.440114e+07, max=89080539.73, CD=0.31565
-   100 samples, avg.#visited=210.78, max.#vis=240, avg.#inserted=988.51, mean=51184212.07±1.42076e+08, max=1215328993.19, CD=0.23744
-  1000 samples, avg.#visited=213.90, max.#vis=259, avg.#inserted=1003.58, mean=39109123.21±1.191286e+08, max=1855637488.14, CD=0.04745
- 10000 samples, avg.#visited=213.98, max.#vis=259, avg.#inserted=1004.70, mean=39652300.46±2.086941e+08, max=13407906281.31, CD=0.03381
-100000 samples, avg.#visited=213.77, max.#vis=265, avg.#inserted=1003.48, mean=39691293.34±3.079431e+08, max=51417315261.27, CD=0.01295
-1000000 samples, avg.#visited=213.72, max.#vis=273, avg.#inserted=1003.16, mean=40605515.01±3.514933e+08, max=139069838773.34, CD=0.00342
+Crowd sampling (CS) (crowd_budget_B=10): random seed = 573571105
+    10 samples, avg.#visited=535.50, max.#vis=538, avg.#inserted=2559.20, avg.#saved=386.40, mean=28457101.76±6.144958e+07, max=202050793.22, CD=0.71002
+   100 samples, avg.#visited=533.32, max.#vis=538, avg.#inserted=2557.58, avg.#saved=381.90, mean=39945262.15±9.952928e+07, max=673837319.41, CD=0.16869
+  1000 samples, avg.#visited=533.73, max.#vis=540, avg.#inserted=2551.85, avg.#saved=382.99, mean=33867322.43±1.58917e+08, max=4395459194.69, CD=0.12978
+ 10000 samples, avg.#visited=533.69, max.#vis=540, avg.#inserted=2552.88, avg.#saved=383.56, mean=37623804.05±1.758482e+08, max=10258911032.13, CD=0.02727
+100000 samples, avg.#visited=533.68, max.#vis=540, avg.#inserted=2552.51, avg.#saved=383.41, mean=39645227.34±2.893846e+08, max=42172466619.82, CD=0.01064
+1000000 samples, avg.#visited=533.70, max.#vis=541, avg.#inserted=2552.96, avg.#saved=383.32, mean=39879356.08±3.080645e+08, max=133162650579.32, CD=0.00334
+Bucket sampling (BS) by outdegree: random seed = 729624731
+    10 samples, avg.#visited=641.60, max.#vis=1077, avg.#inserted=2785.30, mean=15200342.49±2.953407e+07, max=81662357.17, CD=0.53724
+   100 samples, avg.#visited=1048.99, max.#vis=3703, avg.#inserted=4909.49, mean=14272656.74±4.500647e+07, max=382920696.18, CD=0.26829
+  1000 samples, avg.#visited=1170.17, max.#vis=4923, avg.#inserted=5460.16, mean=32993920.21±3.254208e+08, max=7361345854.69, CD=0.22311
+ 10000 samples, avg.#visited=1186.50, max.#vis=6414, avg.#inserted=5527.92, mean=26030745.06±2.828904e+08, max=15227992466.24, CD=0.05850
+100000 samples, avg.#visited=1181.43, max.#vis=6837, avg.#inserted=5507.23, mean=30516913.88±5.865539e+08, max=106968651249.22, CD=0.03505
+1000000 samples, avg.#visited=1184.03, max.#vis=7807, avg.#inserted=5521.61, mean=39677524.51±2.671137e+09, max=1764071024783.80, CD=0.04446
+
+real	170m49,821s
+user	169m32,363s
+sys	1m15,797s
