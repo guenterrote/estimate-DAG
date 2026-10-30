@@ -4,10 +4,10 @@ P    mean=262143.99999999997, variance=inf=inf, S.D.=inf=inf
 IS   mean=262143.99999999997, variance=2.6913399143217326e+138=2.69134e+138, S.D.=1.6405303759216811e+69=1.64053e+69
 IS*  mean=262143.99999999997, variance=2.37332444331878e+227=2.37332e+227, S.D.=4.871677784212314e+113=4.87168e+113
 IS** mean=262143.99999999997, variance=7.350856212444364e+52=7.35086e+52, S.D.=2.71124624710563e+26=2.71125e+26
-first run P:  (2.0, 2)
-first run BS: (65686.61318134809, 73187, 635889)
-first run IS: (934.4633883878989, 58, 0)
-first run CS: (54523.61197674978, 1861, 12194, 446)
+first run P:  (9.731618955540695, 12)
+first run BS: (21399.914112813178, 34903, 299640)
+first run IS: (2843.386222824795, 58, 0)
+first run CS: (4519.581557487543, 1721, 10367, 443)
 Algorithm P: random seed = 755223781
     10 samples, avg.#visited=44.40, max.#vis=104, mean=41739.11±120681.7, max=384008.97, CD=0.92002
    100 samples, avg.#visited=36.68, max.#vis=104, mean=48095.31±414956.7, max=4136553.44, CD=0.86007
@@ -46,3 +46,15 @@ Bucket sampling (BS) by outdegree: random seed = 428767123
   1000 samples, avg.#visited=22070.86, max.#vis=254096, avg.#inserted=182744.89, mean=116193.78±387851.4, max=7147352.06, CD=0.06151
  10000 samples, avg.#visited=22567.23, max.#vis=254096, avg.#inserted=186522.81, mean=415364.82±2.085195e+07, max=2041529092.41, CD=0.49150
 100000 samples, avg.#visited=22382.70, max.#vis=287258, avg.#inserted=185156.54, mean=267091.40±9314635, max=2041529092.41, CD=0.07644
+1000000 samples, avg.#visited=22392.57, max.#vis=302170, avg.#inserted=185146.77, mean=289935.14±5.647188e+07, max=55795256275.35, CD=0.19244
+Crowd sampling (CS) (crowd_budget_B=10): random seed = 116183873
+    10 samples, avg.#visited=1618.80, max.#vis=2201, avg.#inserted=9845.30, avg.#saved=443.70, mean=82166.07±151238.5, max=465536.81, CD=0.56658
+   100 samples, avg.#visited=1777.81, max.#vis=2701, avg.#inserted=10817.74, avg.#saved=472.69, mean=118836.99±419251.1, max=4025359.76, CD=0.33873
+  1000 samples, avg.#visited=1760.13, max.#vis=3001, avg.#inserted=10671.67, avg.#saved=471.62, mean=224951.29±1672882, max=36684228.74, CD=0.16308
+ 10000 samples, avg.#visited=1763.60, max.#vis=3001, avg.#inserted=10713.18, avg.#saved=471.94, mean=314909.44±5380520, max=296932885.80, CD=0.09429
+100000 samples, avg.#visited=1756.80, max.#vis=3101, avg.#inserted=10671.50, avg.#saved=470.37, mean=225565.10±4309098, max=867775149.05, CD=0.03847
+1000000 samples, avg.#visited=1756.88, max.#vis=3481, avg.#inserted=10668.53, avg.#saved=470.61, mean=291566.29±2.604621e+07, max=20239684039.21, CD=0.06942
+
+real	1887m50,044s
+user	1887m42,161s
+sys	0m4,624s
