@@ -3,8 +3,8 @@ Estimating the number of nodes and paths in a DAG by following a random path
 
 This repository contains the programs and experimental results for the paper
 "Estimating the Number of Nodes and Paths in a DAG by Following a Random Path"
-by Günter Rote.
-The full version of the paper is in the file fullpaper.pdf.
+by Günter Rote, http://arxiv.org/abs/2610.38586.
+The copy of the paper is in the file fullpaper.pdf.
 
 The python programs
 `estimating-DAG-permutations.py` and `estimating_DAG_klee_minty.py`
