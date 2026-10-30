@@ -134,3 +134,31 @@ result['KM',18,'Bucket sampling (BS) by outdegree:',100000] = {
               'mean' : 267091.3991616857, 's.d.': 9314635.464760786, 'max': 2041529092.41254, 'CD': 0.0764355984063974,
               'avg.#visited': 22382.69604, 'max.#vis': 287258,
               "avg.#inserted": 185156.54, "avg.#saved": 0.00 }
+result['KM',18,'Bucket sampling (BS) by outdegree:',1000000] = {
+              'mean' : 289935.13647986884, 's.d.': 56471877.709931366, 'max': 55795256275.345505, 'CD': 0.19244047807644574,
+              'avg.#visited': 22392.571192, 'max.#vis': 302170,
+              "avg.#inserted": 185146.77, "avg.#saved": 0.00 }
+result['KM',18,'Crowd sampling (CS) (crowd_budget_B=10):',10] = {
+              'mean' : 82166.07302627405, 's.d.': 151238.4655982207, 'max': 465536.8070235173, 'CD': 0.566580329176318,
+              'avg.#visited': 1618.8, 'max.#vis': 2201,
+              "avg.#inserted": 9845.30, "avg.#saved": 443.70 }
+result['KM',18,'Crowd sampling (CS) (crowd_budget_B=10):',100] = {
+              'mean' : 118836.98601481844, 's.d.': 419251.06865310844, 'max': 4025359.7586867837, 'CD': 0.33872953982397697,
+              'avg.#visited': 1777.81, 'max.#vis': 2701,
+              "avg.#inserted": 10817.74, "avg.#saved": 472.69 }
+result['KM',18,'Crowd sampling (CS) (crowd_budget_B=10):',1000] = {
+              'mean' : 224951.29091906085, 's.d.': 1672881.9292766594, 'max': 36684228.73919262, 'CD': 0.16307632016386994,
+              'avg.#visited': 1760.131, 'max.#vis': 3001,
+              "avg.#inserted": 10671.67, "avg.#saved": 471.62 }
+result['KM',18,'Crowd sampling (CS) (crowd_budget_B=10):',10000] = {
+              'mean' : 314909.435586877, 's.d.': 5380519.740387481, 'max': 296932885.7962854, 'CD': 0.09429151757326996,
+              'avg.#visited': 1763.5968, 'max.#vis': 3001,
+              "avg.#inserted": 10713.18, "avg.#saved": 471.94 }
+result['KM',18,'Crowd sampling (CS) (crowd_budget_B=10):',100000] = {
+              'mean' : 225565.10060996877, 's.d.': 4309097.997398459, 'max': 867775149.0539799, 'CD': 0.03847116183786229,
+              'avg.#visited': 1756.79818, 'max.#vis': 3101,
+              "avg.#inserted": 10671.50, "avg.#saved": 470.37 }
+result['KM',18,'Crowd sampling (CS) (crowd_budget_B=10):',1000000] = {
+              'mean' : 291566.29493752297, 's.d.': 26046206.341044065, 'max': 20239684039.205276, 'CD': 0.06941709103770809,
+              'avg.#visited': 1756.877371, 'max.#vis': 3481,
+              "avg.#inserted": 10668.53, "avg.#saved": 470.61 }
